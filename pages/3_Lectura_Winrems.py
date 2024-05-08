@@ -58,8 +58,8 @@ if archivo_excel2 is not None:
             st.write(df2)
 
             n_reporte=st.text_input("N° de Reporte",placeholder="00000")
-            title_hospital="ibarra"
-            hospital_completo= "HOSPITAL DEL NORTE LOS CEIBOS GUAYAQUIL"
+            title_hospital="50 CENTS"
+            hospital_completo= "HOSPITAL del Ferxxo"
             RUC="0960245668855"
             f1,f2=f.fechas_seleccion()
 

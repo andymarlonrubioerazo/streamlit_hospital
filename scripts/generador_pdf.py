@@ -42,25 +42,25 @@ class PDFWithBackground(FPDF):
 
     def footer(self):
         yi=-28
-        x0=f"Dirección: 18 de Septiembre y Ayacucho,Quito-Ecuador" 
+        x0=f"Dirección: TIMES SQUARE GARDEN, VIEJO YORK" 
         self.set_y(yi) # Posición a 1.5 cm desde el fondo
         self.set_font('helvetica', 'I', 10) # Configurar la fuente para el pie de página
         self.cell(0, 0, x0, 0, 0, 'L')
 
         yi+=4
-        x1="Edificio Hospital Carlos Andrade Marín, 1ra Etapa Subsuelo"
+        x1="Edificio Hospital SNOOP DOG "
         self.set_y(yi) # Posición a 1.5 cm desde el fondo
         self.set_font('helvetica', 'I', 10) # Configurar la fuente para el pie de página
         self.cell(0, 0, x1, 0, 0, 'L')
 
         yi+=4
-        x2="Correo: yulmaris.zambrano @iess.gob.ec / edgar.zea@iess.gob.ec"
+        x2="Correo: daddy.yankee @reggaeton.com.ec "
         self.set_y(yi) # Posición a 1.5 cm desde el fondo
         self.set_font('helvetica', 'I', 10) # Configurar la fuente para el pie de página
         self.cell(0, 0, x2, 0, 0, 'L')
 
         yi+=4
-        x3="Laboratorio de Dosimetría :022944400 Ext. 2296-2295"
+        x3="Laboratorio de Dosimetría :1800 88888 Ext. 2296-2295"
         self.set_y(yi) # Posición a 1.5 cm desde el fondo
         self.set_font('helvetica', 'I', 10) # Configurar la fuente para el pie de página
         self.cell(0, 0, x3, 0, 0, 'L')
@@ -186,8 +186,8 @@ def acronimos(pdf,yi):
 def revisado(pdf, fecha,yi):
     x1="Realizado por: ING. JAIR ZEA MARÍN."
     x2="LABORATORIO DE DOSIMETRIA"
-    x3="UNIDAD DE SEGURIDAD Y PROTECCION RADIOLOGICA"
-    x4='HOSPITAL DE ESPECIALIDADES CARLOS ANDRADE MARÍN "HCAM"'
+    x3="UNIDAD DE SEGURIDAD Y PROTECCION musical"
+    x4='HOSPITAL DE ESPECIALIDADES SNOOP DOG'
     
     yi+=30
     ylim=260
@@ -216,7 +216,7 @@ def revisado(pdf, fecha,yi):
     pdf.set_y(yi)
     pdf.set_font('Helvetica',size=10)
     pdf.cell(25,5,"Revisado por:",align='L', border=1)
-    pdf.cell(80,5,"Fis. Méd. Yulmaris Zambrano (Resp Tec LDP)",align='L', border=1)
+    pdf.cell(80,5,"Fis. Méd. FERXXO",align='L', border=1)
 
     yi+=5
     pdf.set_y(yi)
@@ -390,8 +390,7 @@ def normas(pdf, yi):
     pdf.set_xy(15,yi)
     pdf.cell(5,0,x3,align='L')
 
-    x2=("Pruebas de ensayo: IEC 1066/IEC 62387; incertidumbre combinada con k=2, para un" 
-        "nivel de confianza del 95%")
+    x2=("NORMATIVA 1 PARA EL DESARROLLO E INSCRIPCION DE LOS ARGUMENTOS")
     x1=x2.split()
     x3=""
 
