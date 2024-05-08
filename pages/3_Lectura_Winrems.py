@@ -16,7 +16,7 @@ st.markdown("# :hospital: :orange[Lectura de los Dosímetros] :desktop_computer:
 st.sidebar.header("Lectura de Dosímetros en Winrem")
 
 
-st.markdown("#### Subir el Historial de LECTURAS de la unidad/institución"
+st.markdown("#### Subir el archvio EXCEL LECTURA.xls y seleccionar el AÑO 2024"
                                   ":green_book:")
 
 archivo_excel2 = st.file_uploader("",
@@ -31,12 +31,12 @@ if archivo_excel2 is not None:
     st.write(df2)
 
 
-    fecha_canje2=st.selectbox("Seleccione el período de LECTURA de los dosímetros:",
+    fecha_canje2=st.selectbox("Seleccione el período de LECTURA de los dosímetros: SELECCIONE ENERO-MARZO 2024",
                 name2,
                 key="fecha_canje2"
                 )
 
-    st.markdown("#### Subir el Historial de los Dosímetros:green_book:")
+    st.markdown("#### Subir el archivo excel dosimetro.xls :green_book:")
     archivo_excel3 = st.file_uploader(''
                                     ,type=['xlsx',"xls"],key="dosimetros")
 
@@ -45,7 +45,7 @@ if archivo_excel2 is not None:
         df3,_=f.lectura_dosimetros(archivo_excel3)
         st.write(df3)
 
-        st.markdown("#### Subir el archivo WINREM .asc del equipo 💻:")
+        st.markdown("#### Subir el archivo WINREM winrem.asc del equipo 💻:")
         archivo_asc=st.file_uploader("", 
                                      type=["asc"], key="asc")
 
