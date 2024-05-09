@@ -251,8 +251,8 @@ def fechas_seleccion():
 
     try:
         f1,f2=d[0].strftime('%d/%m/%Y'),d[1].strftime('%d/%m/%Y')
-        x1=f"{d[0].strftime("%d")}/{meses[d[0].strftime("%m")]}/{d[0].strftime("%Y")}"
-        x2=f"{d[1].strftime("%d")}/{meses[d[1].strftime("%m")]}/{d[1].strftime("%Y")}"
+        x1=f"{d[0].strftime('%d')}/{meses[d[0].strftime('%m')]}/{d[0].strftime('%Y')}"
+        x2=f"{d[1].strftime('%d')}/{meses[d[1].strftime('%m')]}/{d[1].strftime('%Y')}"
         
     except:
         f1=fi

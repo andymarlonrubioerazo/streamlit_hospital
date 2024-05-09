@@ -4,7 +4,7 @@ from dateutil.relativedelta import *
 import pandas as pd
 import numpy as np
 from io import BytesIO
-from fpdf import FPDF
+from fpdf import FPDF 
 
 ####__MIS FUNCIONES
 ####__MIS FUNCIONES
@@ -16,7 +16,7 @@ st.markdown("# :hospital: :orange[Lectura de los Dosímetros] :desktop_computer:
 st.sidebar.header("Lectura de Dosímetros en Winrem")
 
 
-st.markdown("#### Subir el archvio EXCEL LECTURA.xls y seleccionar el AÑO 2024"
+st.markdown("#### Subir el archivo excel LECTURA.xls "
                                   ":green_book:")
 
 archivo_excel2 = st.file_uploader("",
@@ -31,12 +31,12 @@ if archivo_excel2 is not None:
     st.write(df2)
 
 
-    fecha_canje2=st.selectbox("Seleccione el período de LECTURA de los dosímetros: SELECCIONE ENERO-MARZO 2024",
+    fecha_canje2=st.selectbox("Seleccione el período de LECTURA de los dosímetros:",
                 name2,
                 key="fecha_canje2"
                 )
 
-    st.markdown("#### Subir el archivo excel dosimetro.xls :green_book:")
+    st.markdown("#### Subir el archivo dosimetro.xls:green_book:")
     archivo_excel3 = st.file_uploader(''
                                     ,type=['xlsx',"xls"],key="dosimetros")
 
@@ -45,7 +45,7 @@ if archivo_excel2 is not None:
         df3,_=f.lectura_dosimetros(archivo_excel3)
         st.write(df3)
 
-        st.markdown("#### Subir el archivo WINREM winrem.asc del equipo 💻:")
+        st.markdown("#### Subir el archivo winrem.asc del equipo 💻:")
         archivo_asc=st.file_uploader("", 
                                      type=["asc"], key="asc")
 
@@ -58,9 +58,9 @@ if archivo_excel2 is not None:
             st.write(df2)
 
             n_reporte=st.text_input("N° de Reporte",placeholder="00000")
-            title_hospital="50 CENTS"
-            hospital_completo= "HOSPITAL del Ferxxo"
-            RUC="0960245668855"
+            title_hospital="Viejo York"
+            hospital_completo= "HOSPITAL de la vieja escuela del Rap"
+            RUC="065266522222"
             f1,f2=f.fechas_seleccion()
 
             col1, col2=st.columns(2)
@@ -83,3 +83,4 @@ if archivo_excel2 is not None:
                     file_name=f"HISTORIAL_DE_DOSIS_{sheet2}.xlsx",
                     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 )
+                

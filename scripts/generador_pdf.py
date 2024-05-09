@@ -1,4 +1,4 @@
-from fpdf import FPDF
+from fpdf import FPDF # type: ignore
 from datetime import datetime
 from openpyxl.utils.dataframe import dataframe_to_rows
 import numpy as np
@@ -35,10 +35,10 @@ class PDFWithBackground(FPDF):
         self.cell(70, 5 ,"Vigencia: 20/05/2020", border="TR")
         
         x0=self.page_no()
-        x1=self.str_alias_nb_pages
+        #x1=self.str_alias_nb_pages
         self.set_xy(50,25)
         self.cell(70, 5,"Termoluminiscente", border="RB",align="C")
-        self.cell(70, 5 ,f"Página {x0} de {x1}", border="TBR")
+        self.cell(70, 5 ,f"Página {x0} de "+"{nb}", border="TBR")
 
     def footer(self):
         yi=-28
@@ -464,7 +464,7 @@ def create_pdf(df, n_reporte,tile_hospital,hospital_completo,RUC,f1,f2):
     fecha_today = datetime.today().strftime("%d/%m/%Y")
 
     pdf = PDFWithBackground()
-
+    pdf.alias_nb_pages()
     pdf.add_page()
 
     header(pdf,n_reporte,tile_hospital,hospital_completo,RUC,f1,f2,fecha_today)
